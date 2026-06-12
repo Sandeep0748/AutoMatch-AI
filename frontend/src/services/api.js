@@ -2,7 +2,7 @@
  * API service for backend communication
  */
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 /**
  * Get car recommendations based on user preferences

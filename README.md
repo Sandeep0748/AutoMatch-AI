@@ -53,6 +53,16 @@ GEMINI_API_KEY=your_gemini_api_key_here
 PORT=5000
 ```
 
+Create a `.env` file in the `frontend` directory (for production deployment):
+```
+VITE_API_URL=https://your-backend-url.com
+```
+
+For local development, use:
+```
+VITE_API_URL=http://localhost:5000
+```
+
 4. Start both servers (single command)
 ```bash
 npm run dev
@@ -176,10 +186,16 @@ Each car includes:
 
 ## Environment Variables
 
+### Backend
 | Variable | Description | Required |
 |----------|-------------|----------|
 | GEMINI_API_KEY | Google Gemini API key for AI explanations | Yes |
 | PORT | Backend server port | No (default: 5000) |
+
+### Frontend
+| Variable | Description | Required |
+|----------|-------------|----------|
+| VITE_API_URL | Backend API URL (e.g., https://your-backend-url.com) | Yes for production |
 
 ## Features in Detail
 
