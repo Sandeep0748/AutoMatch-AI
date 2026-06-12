@@ -29,6 +29,8 @@ const Questionnaire = () => {
       // Store results and preferences in localStorage for the Results page
       localStorage.setItem('recommendations', JSON.stringify(response.data));
       localStorage.setItem('preferences', JSON.stringify(preferences));
+      localStorage.setItem('recommendationsTimestamp', Date.now().toString());
+      console.log('Image URLs from API:', response.data.map(car => ({ id: car.id, image: car.image })));
       navigate('/results');
     } catch (error) {
       console.error('Error getting recommendations:', error);

@@ -52,8 +52,25 @@ const Results = () => {
   useEffect(() => {
     const storedResults = localStorage.getItem('recommendations');
     const storedPreferences = localStorage.getItem('preferences');
+    const storedTimestamp = localStorage.getItem('recommendationsTimestamp');
+    
+    // Cache invalidation: clear cache if older than 1 hour
+    const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
+    const shouldClearCache = storedTimestamp && (Date.now() - parseInt(storedTimestamp)) > CACHE_DURATION;
+    
+    if (shouldClearCache) {
+      console.log('Clearing expired cache');
+      localStorage.removeItem('recommendations');
+      localStorage.removeItem('preferences');
+      localStorage.removeItem('recommendationsTimestamp');
+      navigate('/');
+      return;
+    }
+    
     if (storedResults) {
-      setRecommendations(JSON.parse(storedResults));
+      const parsedResults = JSON.parse(storedResults);
+      console.log('Image URLs from localStorage:', parsedResults.map(car => ({ id: car.id, image: car.image })));
+      setRecommendations(parsedResults);
     } else {
       navigate('/');
     }

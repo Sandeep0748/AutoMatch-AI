@@ -8,7 +8,7 @@
     "mileage": 22,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80"
+    "image": "/images/cars/swift.jpg"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "mileage": 18,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80"
+    "image": "/images/cars/punch.jpg"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "mileage": 19,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=80"
+    "image": "/images/cars/exter.jpg"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "mileage": 21,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80"
+    "image": "/images/cars/baleno.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "mileage": 17,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1568844293986-8c1a5f8e7d89?w=800&q=80"
+    "image": "/images/cars/nexon.jpg"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "mileage": 18,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80"
+    "image": "/images/cars/Venue.jpg"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "mileage": 17,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80"
+    "image": "/images/cars/Brezza.jpg"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "mileage": 19,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&q=80"
+    "image": "/images/cars/Altroz.jpg"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "mileage": 20,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+    "image": "/images/cars/i20.jpg"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "mileage": 22,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1606152421811-aa6b1e30b0f6?w=800&q=80"
+    "image": "/images/cars/Dzire.jpg"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "mileage": 20,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+    "image": "/images/cars/Tiago.jpg"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "mileage": 16,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=80"
+    "image": "/images/cars/Creta.jpg"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "mileage": 22,
     "safetyRating": 3,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&q=80"
+    "image": "/images/cars/Wagon R.jpg"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "mileage": 14,
     "safetyRating": 5,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80"
+    "image": "/images/cars/Safari.jpg"
   },
   {
     "id": 15,
@@ -162,6 +162,6 @@
     "mileage": 21,
     "safetyRating": 4,
     "familyFriendly": true,
-    "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+    "image": "/images/cars/Grand i10 Nios.jpg"
   }
 ]
