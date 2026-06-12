@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "make": "Maruti Suzuki",
+    "model": "Swift",
+    "price": 650000,
+    "fuelType": "petrol",
+    "mileage": 22,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80"
+  },
+  {
+    "id": 2,
+    "make": "Tata",
+    "model": "Punch",
+    "price": 600000,
+    "fuelType": "petrol",
+    "mileage": 18,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80"
+  },
+  {
+    "id": 3,
+    "make": "Hyundai",
+    "model": "Exter",
+    "price": 620000,
+    "fuelType": "petrol",
+    "mileage": 19,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1619682817481-e994891cd1f5?w=800&q=80"
+  },
+  {
+    "id": 4,
+    "make": "Maruti Suzuki",
+    "model": "Baleno",
+    "price": 680000,
+    "fuelType": "petrol",
+    "mileage": 21,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&q=80"
+  },
+  {
+    "id": 5,
+    "make": "Tata",
+    "model": "Nexon",
+    "price": 800000,
+    "fuelType": "petrol",
+    "mileage": 17,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1568844293986-8c1a5f8e7d89?w=800&q=80"
+  },
+  {
+    "id": 6,
+    "make": "Hyundai",
+    "model": "Venue",
+    "price": 750000,
+    "fuelType": "petrol",
+    "mileage": 18,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80"
+  },
+  {
+    "id": 7,
+    "make": "Maruti Suzuki",
+    "model": "Brezza",
+    "price": 850000,
+    "fuelType": "petrol",
+    "mileage": 17,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&q=80"
+  },
+  {
+    "id": 8,
+    "make": "Tata",
+    "model": "Altroz",
+    "price": 720000,
+    "fuelType": "petrol",
+    "mileage": 19,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&q=80"
+  },
+  {
+    "id": 9,
+    "make": "Hyundai",
+    "model": "i20",
+    "price": 700000,
+    "fuelType": "petrol",
+    "mileage": 20,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+  },
+  {
+    "id": 10,
+    "make": "Maruti Suzuki",
+    "model": "Dzire",
+    "price": 660000,
+    "fuelType": "petrol",
+    "mileage": 22,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1606152421811-aa6b1e30b0f6?w=800&q=80"
+  },
+  {
+    "id": 11,
+    "make": "Tata",
+    "model": "Tiago",
+    "price": 580000,
+    "fuelType": "petrol",
+    "mileage": 20,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1617788138017-80ad40651399?w=800&q=80"
+  },
+  {
+    "id": 12,
+    "make": "Hyundai",
+    "model": "Creta",
+    "price": 1100000,
+    "fuelType": "petrol",
+    "mileage": 16,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&q=80"
+  },
+  {
+    "id": 13,
+    "make": "Maruti Suzuki",
+    "model": "Wagon R",
+    "price": 560000,
+    "fuelType": "petrol",
+    "mileage": 22,
+    "safetyRating": 3,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&q=80"
+  },
+  {
+    "id": 14,
+    "make": "Tata",
+    "model": "Safari",
+    "price": 1600000,
+    "fuelType": "diesel",
+    "mileage": 14,
+    "safetyRating": 5,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&q=80"
+  },
+  {
+    "id": 15,
+    "make": "Hyundai",
+    "model": "Grand i10 Nios",
+    "price": 590000,
+    "fuelType": "petrol",
+    "mileage": 21,
+    "safetyRating": 4,
+    "familyFriendly": true,
+    "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+  }
+]
