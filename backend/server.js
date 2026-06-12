@@ -12,9 +12,22 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'https://automatch-ai.vercel.app', 'https://automatch-ai.onrender.com'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Request logging middleware
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  console.log('Headers:', req.headers);
+  if (req.body) {
+    console.log('Body:', req.body);
+  }
+  next();
+});
 
 // Routes
 app.use('/api', recommendationRoutes);
@@ -33,7 +46,7 @@ app.get('/', (req, res) => {
 
 // Error handling middleware
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('Error:', err.stack);
   res.status(500).json({
     success: false,
     message: 'Something went wrong!',

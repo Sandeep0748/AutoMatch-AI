@@ -11,6 +11,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
  */
 export async function getRecommendations(preferences) {
   try {
+    console.log('API Request:', `${API_BASE_URL}/recommend`);
     const response = await fetch(`${API_BASE_URL}/recommend`, {
       method: 'POST',
       headers: {
@@ -20,10 +21,13 @@ export async function getRecommendations(preferences) {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to get recommendations');
+      const errorData = await response.json().catch(() => ({}));
+      console.error('API Error:', response.status, errorData);
+      throw new Error(`Failed to get recommendations: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
+    console.log('API Response:', data);
     return data;
   } catch (error) {
     console.error('Error fetching recommendations:', error);
@@ -37,13 +41,17 @@ export async function getRecommendations(preferences) {
  */
 export async function getAllCars() {
   try {
+    console.log('API Request:', `${API_BASE_URL}/cars`);
     const response = await fetch(`${API_BASE_URL}/cars`);
     
     if (!response.ok) {
-      throw new Error('Failed to fetch cars');
+      const errorData = await response.json().catch(() => ({}));
+      console.error('API Error:', response.status, errorData);
+      throw new Error(`Failed to fetch cars: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
+    console.log('API Response:', data);
     return data;
   } catch (error) {
     console.error('Error fetching cars:', error);
