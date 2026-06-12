@@ -42,11 +42,9 @@ const ShortlistButton = () => {
       title="View Shortlist"
     >
       <span className="text-2xl">❤️</span>
-      {shortlistCount > 0 && (
-        <span className="bg-white text-red-500 text-xs font-bold px-2 py-1 rounded-full">
-          {shortlistCount}
-        </span>
-      )}
+      <span className="bg-white text-red-500 text-xs font-bold px-2 py-1 rounded-full">
+        {shortlistCount}
+      </span>
     </button>
   );
 };

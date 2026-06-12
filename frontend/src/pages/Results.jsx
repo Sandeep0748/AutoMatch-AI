@@ -248,7 +248,7 @@ const Results = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {recommendations.map((car, index) => (
-            <Card key={car.id} className="relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+            <Card key={car.id} className="relative overflow-hidden hover:scale-105 transition-all duration-300 hover:shadow-2xl h-full flex flex-col">
               {/* Match Score Badge */}
               <div className="absolute top-4 left-4 z-20">
                 <div className={`px-4 py-2 rounded-full text-sm font-bold shadow-lg ${
@@ -260,12 +260,25 @@ const Results = () => {
                 </div>
               </div>
 
-              <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold z-10 shadow-lg">
-                #{index + 1}
+              <div className="absolute top-4 right-4 flex gap-2 z-20">
+                <button
+                  onClick={() => isShortlisted(car.id) ? removeFromShortlist(car.id) : addToShortlist(car)}
+                  className={`p-2 rounded-full shadow-lg transition-all ${
+                    isShortlisted(car.id) 
+                      ? 'bg-red-500 text-white hover:bg-red-600' 
+                      : 'bg-white text-gray-400 hover:bg-red-50 hover:text-red-500'
+                  }`}
+                  title={isShortlisted(car.id) ? 'Remove from shortlist' : 'Add to shortlist'}
+                >
+                  {isShortlisted(car.id) ? '❤️' : '🤍'}
+                </button>
+                <div className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                  #{index + 1}
+                </div>
               </div>
               
               {/* Car Image */}
-              <div className="relative h-64 bg-gray-100 mb-4 overflow-hidden">
+              <div className="relative h-64 bg-gray-100 mb-4 overflow-hidden flex-shrink-0">
                 {imageErrors[car.id] ? (
                   <div className="w-full h-full flex items-center justify-center bg-gray-200">
                     <div className="text-center">
@@ -283,8 +296,8 @@ const Results = () => {
                 )}
               </div>
 
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-gray-800">
+              <div className="mb-4 flex-shrink-0">
+                <h3 className="text-2xl font-bold text-gray-800 truncate">
                   {car.make} {car.model}
                 </h3>
                 <p className="text-3xl font-bold text-blue-600 mt-2">
@@ -345,7 +358,7 @@ const Results = () => {
 
               {/* Why This Car Section */}
               {car.explanation && (
-                <div className="border-t mt-4 pt-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4">
+                <div className="border-t mt-4 pt-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 flex-grow">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xl">💡</span>
                     <h4 className="font-bold text-gray-800">Why This Car?</h4>
@@ -396,7 +409,7 @@ const Results = () => {
             Start Over
           </Button>
           <Button onClick={() => navigate('/shortlist')} className="bg-red-500 hover:bg-red-600">
-            View Shortlist ({shortlist.length})
+            ❤️ View Shortlist ({shortlist.length})
           </Button>
         </div>
       </div>

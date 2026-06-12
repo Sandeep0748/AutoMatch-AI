@@ -42,21 +42,21 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button 
               onClick={() => navigate('/questionnaire')}
-              className="text-lg px-10 py-4 bg-white text-blue-900 hover:bg-gray-100 shadow-2xl"
+              className="text-lg px-10 py-4 bg-blue-600 text-white hover:bg-blue-700 shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Start Your Journey
             </Button>
             <Button 
-              onClick={() => navigate('/questionnaire')}
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline"
-              className="text-lg px-10 py-4 border-2 border-white text-white hover:bg-white/10"
+              className="text-lg px-10 py-4 border-2 border-white text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               Learn More
             </Button>
           </div>
 
-          {/* How It Works Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {/* Features Section */}
+          <div id="features" className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                 <span className="text-3xl">📝</span>

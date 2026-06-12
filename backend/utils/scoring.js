@@ -51,14 +51,26 @@ function calculateScore(car, preferences) {
 function calculateBudgetScore(car, budget) {
   if (!budget) return 50; // Neutral if no budget specified
 
-  const priceDiff = Math.abs(car.price - budget);
-  const percentageDiff = (priceDiff / budget) * 100;
+  const priceDiff = car.price - budget;
+  const percentageDiff = (Math.abs(priceDiff) / budget) * 100;
 
-  if (percentageDiff <= 10) return 100; // Within 10% of budget
-  if (percentageDiff <= 20) return 80; // Within 20% of budget
-  if (percentageDiff <= 30) return 60; // Within 30% of budget
-  if (percentageDiff <= 50) return 40; // Within 50% of budget
-  return 20; // Far from budget
+  // Penalize cars above budget more heavily
+  if (priceDiff > 0) {
+    // Car is above budget
+    if (percentageDiff <= 5) return 100; // Within 5% above budget
+    if (percentageDiff <= 10) return 85; // Within 10% above budget
+    if (percentageDiff <= 20) return 60; // Within 20% above budget
+    if (percentageDiff <= 30) return 40; // Within 30% above budget
+    if (percentageDiff <= 50) return 20; // Within 50% above budget
+    return 10; // Far above budget
+  } else {
+    // Car is below budget - better match
+    if (percentageDiff <= 10) return 100; // Within 10% below budget
+    if (percentageDiff <= 20) return 95; // Within 20% below budget
+    if (percentageDiff <= 30) return 90; // Within 30% below budget
+    if (percentageDiff <= 50) return 85; // Within 50% below budget
+    return 80; // Far below budget (great value)
+  }
 }
 
 /**
