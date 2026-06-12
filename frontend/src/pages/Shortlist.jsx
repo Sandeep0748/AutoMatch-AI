@@ -18,19 +18,37 @@ const Shortlist = () => {
   // Load shortlist from localStorage on mount
   useEffect(() => {
     const storedShortlist = localStorage.getItem('shortlist');
+    console.log('Shortlist page - Loading from localStorage:', storedShortlist);
     if (storedShortlist) {
-      setShortlist(JSON.parse(storedShortlist));
+      const parsed = JSON.parse(storedShortlist);
+      console.log('Shortlist page - Parsed data:', parsed);
+      setShortlist(parsed);
     }
+    
+    // Listen for shortlist updates from other pages
+    const handleShortlistUpdate = () => {
+      const updatedShortlist = localStorage.getItem('shortlist');
+      console.log('Shortlist page - Received shortlistUpdated event:', updatedShortlist);
+      if (updatedShortlist) {
+        setShortlist(JSON.parse(updatedShortlist));
+      }
+    };
+    
+    window.addEventListener('shortlistUpdated', handleShortlistUpdate);
+    
+    return () => {
+      window.removeEventListener('shortlistUpdated', handleShortlistUpdate);
+    };
   }, []);
 
-  // Save shortlist to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('shortlist', JSON.stringify(shortlist));
-  }, [shortlist]);
+  // Note: We don't save to localStorage here to avoid overwriting data on mount
+  // The Results page handles saving, and we only dispatch events when removing
 
   const removeFromShortlist = (carId) => {
-    setShortlist(shortlist.filter(item => item.id !== carId));
-    // Dispatch custom event for same-tab updates
+    const updatedShortlist = shortlist.filter(item => item.id !== carId);
+    setShortlist(updatedShortlist);
+    // Save to localStorage and dispatch event
+    localStorage.setItem('shortlist', JSON.stringify(updatedShortlist));
     window.dispatchEvent(new Event('shortlistUpdated'));
   };
 

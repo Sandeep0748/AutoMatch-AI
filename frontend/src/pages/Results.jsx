@@ -28,6 +28,7 @@ const Results = () => {
 
   // Save shortlist to localStorage whenever it changes
   useEffect(() => {
+    console.log('Results page - Saving shortlist to localStorage:', shortlist);
     localStorage.setItem('shortlist', JSON.stringify(shortlist));
   }, [shortlist]);
 
