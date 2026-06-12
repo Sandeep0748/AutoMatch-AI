@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://auto-match-ai-tau.vercel.app', 'https://automatch-ai.onrender.com'],
+  origin: ['http://localhost:3000', 'https://auto-match-ai-tau.vercel.app', 'https://auto-match-ai-rosy.vercel.app', 'https://automatch-ai.onrender.com'],
   credentials: true
 }));
 app.use(express.json());

@@ -3,9 +3,7 @@
  */
 
 // Production-safe API URL
-const API_BASE_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://automatch-ai.onrender.com/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 /**
  * Get car recommendations based on user preferences
